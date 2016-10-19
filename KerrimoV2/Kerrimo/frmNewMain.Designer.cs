@@ -60,6 +60,8 @@
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.POMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.invoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -83,8 +85,6 @@
             this.Label11 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.trackOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
@@ -376,6 +376,20 @@
             this.POMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.POMenuItem.Click += new System.EventHandler(this.POMenuItem_Click);
             // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.orderToolStripMenuItem.Text = "Order";
+            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
+            // 
+            // trackOrderToolStripMenuItem
+            // 
+            this.trackOrderToolStripMenuItem.Name = "trackOrderToolStripMenuItem";
+            this.trackOrderToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.trackOrderToolStripMenuItem.Text = "Track Order";
+            this.trackOrderToolStripMenuItem.Click += new System.EventHandler(this.trackOrderToolStripMenuItem_Click);
+            // 
             // invoiceToolStripMenuItem
             // 
             this.invoiceToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -448,9 +462,9 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.Button3);
             this.groupBox2.Location = new System.Drawing.Point(527, 59);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(295, 123);
             this.groupBox2.TabIndex = 124;
             this.groupBox2.TabStop = false;
@@ -461,7 +475,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(148, 38);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 49);
             this.button4.TabIndex = 3;
@@ -475,7 +489,7 @@
             this.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3.Location = new System.Drawing.Point(15, 38);
-            this.Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button3.Margin = new System.Windows.Forms.Padding(4);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(125, 49);
             this.Button3.TabIndex = 2;
@@ -485,14 +499,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtSuppliesName);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 59);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(483, 123);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(379, 123);
             this.groupBox1.TabIndex = 123;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search by Supplies Name";
@@ -501,19 +514,20 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(375, 38);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(906, 79);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 65);
             this.button1.TabIndex = 1;
             this.button1.Text = "&View Report";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtSuppliesName
             // 
             this.txtSuppliesName.Location = new System.Drawing.Point(12, 54);
-            this.txtSuppliesName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSuppliesName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuppliesName.Name = "txtSuppliesName";
             this.txtSuppliesName.Size = new System.Drawing.Size(353, 30);
             this.txtSuppliesName.TabIndex = 0;
@@ -531,7 +545,7 @@
             this.Column5,
             this.Column6});
             this.dataGridView1.Location = new System.Drawing.Point(36, 190);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(964, 417);
             this.dataGridView1.TabIndex = 122;
@@ -590,27 +604,13 @@
             this.groupBox4.Controls.Add(this.groupBox2);
             this.groupBox4.Controls.Add(this.groupBox1);
             this.groupBox4.Location = new System.Drawing.Point(56, 185);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1049, 630);
             this.groupBox4.TabIndex = 127;
             this.groupBox4.TabStop = false;
             this.groupBox4.Visible = false;
-            // 
-            // trackOrderToolStripMenuItem
-            // 
-            this.trackOrderToolStripMenuItem.Name = "trackOrderToolStripMenuItem";
-            this.trackOrderToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.trackOrderToolStripMenuItem.Text = "Track Order";
-            this.trackOrderToolStripMenuItem.Click += new System.EventHandler(this.trackOrderToolStripMenuItem_Click);
-            // 
-            // orderToolStripMenuItem
-            // 
-            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.orderToolStripMenuItem.Text = "Order";
-            this.orderToolStripMenuItem.Click += new System.EventHandler(this.orderToolStripMenuItem_Click);
             // 
             // frmNewMain
             // 
@@ -618,12 +618,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1143, 846);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.StatusStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox4);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNewMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";

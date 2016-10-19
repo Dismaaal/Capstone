@@ -259,11 +259,11 @@ namespace Kerrimo
                 //The DataSet you created.
                 SqlConnection con = new SqlConnection(cs.DBConn);
                 cmd.Connection = con;
-                cmd.CommandText = "SELECT * from Supplies_List";
+                cmd.CommandText = "Select * from Temp_Stock t, Supplies_List s where  t.ProductID = s.ProductID";
                 cmd.CommandType = CommandType.Text;
                 myDA.SelectCommand = cmd;
                 myDA.Fill(myDS, "Supplies_List");
-                //myDA.Fill(myDS, "Stock");
+                myDA.Fill(myDS, "Temp_Stock");
                 //myDA.Fill(myDS, "Customer");
                 rpt.SetDataSource(myDS);
                 frmSOHReport frm = new frmSOHReport();
