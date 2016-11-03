@@ -224,6 +224,26 @@ namespace Kerrimo
             Reset();
         }
 
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ListView1.SelectedItems.Count > 0)
+            {
+                ListViewItem item = ListView1.SelectedItems[0];
+                txtProductName.Text = item.SubItems[2].Text;
+                txtPrice.Text = item.SubItems[3].Text;
+                txtSaleQty.Text = item.SubItems[4].Text;
+                txtTotalAmount.Text = item.SubItems[5].Text;
+                txtAvailableQty.Text = item.SubItems[6].Text;
+            }
+            else
+            {
+                txtProductName.Text = string.Empty;
+                txtPrice.Text = string.Empty;
+                txtSaleQty.Text = string.Empty;
+                txtTotalAmount.Text = string.Empty;
+            }
+
         }
+    }
     }
 

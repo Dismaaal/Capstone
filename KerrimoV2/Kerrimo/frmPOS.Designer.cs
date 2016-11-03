@@ -448,7 +448,7 @@
             // 
             // txtDiscountAmount
             // 
-            this.txtDiscountAmount.Location = new System.Drawing.Point(1221, 482);
+            this.txtDiscountAmount.Location = new System.Drawing.Point(1221, 481);
             this.txtDiscountAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscountAmount.Name = "txtDiscountAmount";
             this.txtDiscountAmount.ReadOnly = true;
@@ -462,7 +462,7 @@
             this.label17.BackColor = System.Drawing.Color.White;
             this.label17.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(1160, 482);
+            this.label17.Location = new System.Drawing.Point(1160, 481);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(29, 26);
@@ -472,7 +472,7 @@
             // txtDiscountPer
             // 
             this.txtDiscountPer.Enabled = false;
-            this.txtDiscountPer.Location = new System.Drawing.Point(1079, 484);
+            this.txtDiscountPer.Location = new System.Drawing.Point(1079, 483);
             this.txtDiscountPer.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscountPer.Name = "txtDiscountPer";
             this.txtDiscountPer.Size = new System.Drawing.Size(68, 22);

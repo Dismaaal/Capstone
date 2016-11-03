@@ -307,7 +307,7 @@ namespace Kerrimo
                 frmSales.label6.Text = label9.Text;
                 con = new SqlConnection(cs.DBConn);
                 con.Open();
-                cmd = new SqlCommand("SELECT Supplies_List.SuppliesID,SO.SuppliesName,SO.Price,SO.Quantity,SO.TotalAmount from PO,SO,Supplies_List where PO.OrderNo=SO.OrderNo and Supplies_List.SuppliesID=SO.SuppliesID and PO.OrderNo='" + dr.Cells[0].Value.ToString() + "'", con);
+                cmd = new SqlCommand("SELECT Supplies_List.SuppliesID,SO.SuppliesName,SO.Price,SO.Quantity,SO.TotalAmount,Temp_Stock.Quantity from PO,SO,Supplies_List,Temp_Stock where PO.OrderNo=SO.OrderNo and Supplies_List.SuppliesID=SO.SuppliesID and Supplies_List.SuppliesID=Temp_Stock.SuppliesID and PO.OrderNo='" + dr.Cells[0].Value.ToString() + "'", con);
                 rdr = cmd.ExecuteReader();
                 while (rdr.Read() == true)
                 {
@@ -317,9 +317,10 @@ namespace Kerrimo
                     lst.SubItems.Add(rdr[2].ToString().Trim());
                     lst.SubItems.Add(rdr[3].ToString().Trim());
                     lst.SubItems.Add(rdr[4].ToString().Trim());
+                    lst.SubItems.Add(rdr[5].ToString().Trim());
                     frmSales.ListView1.Items.Add(lst);
                 }
-                frmSales.ListView1.Enabled = false;
+                frmSales.ListView1.Enabled = true;
                 frmSales.Button7.Enabled = false;
             }
             catch (Exception ex)
@@ -384,7 +385,7 @@ namespace Kerrimo
                     lst.SubItems.Add(rdr[4].ToString().Trim());
                     frmSales.ListView1.Items.Add(lst);
                 }
-                frmSales.ListView1.Enabled = false;
+                frmSales.ListView1.Enabled = true;
                 frmSales.Button7.Enabled = false;
             }
             catch (Exception ex)

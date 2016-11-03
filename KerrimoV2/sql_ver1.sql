@@ -262,4 +262,4 @@ DELETE FROM SliderConfiguration
 insert into SliderConfiguration VALUES ('article.jpg',1,'1')
 insert into SliderConfiguration VALUES ('boxing.jpg',1,'1')
 
-
+SELECT Supplies_List.SuppliesID,SuppliesName,Unit,Price,sum(Quantity),sum(Price*Quantity) from Temp_Stock,Supplies_List where Temp_Stock.SuppliesID=Supplies_List.SuppliesID group by Supplies_List.SuppliesID,suppliesname,Price,unit,Quantity having(Quantity between 100 and 200)  order by SuppliesName
